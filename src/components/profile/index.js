@@ -1,46 +1,34 @@
 import { h, Component } from 'preact';
 import style from './style.less';
 import Header from '../header';
+import {observer,inject} from "mobx-preact";
 
+@inject('countStore')
+@observer
 export default class Profile extends Component {
     constructor(props){
         super(props);
         this.state = {
-            count : 0
+            asd:'123'
         }
     }
-
-    // update the current time
-    updateTime () {
-	let time = new Date().toLocaleString();
-	this.setState({ time });
-    };
-
     // gets called when this route is navigated to
-    componentDidMount() {
-	// start a timer for the clock:
-	this.timer = setInterval(this.updateTime.bind(this), 1000);
-	this.updateTime();
-
-	// every time we get remounted, increment a counter:
-	this.setState({ count: this.state.count+1 });
-    }
+    componentDidMount() {}
 
     // gets called just before navigating away from the route
-    componentWillUnmount() {
-	clearInterval(this.timer);
-    }
-
+    componentWillUnmount() {}
+    
     // Note: `user` comes from the URL, courtesy of our router
-    render({ user }, { time, count }) {
+    render(props,state) {
+        console.log(props,state)
 	return (
 	    <div class={style.profile}>
             <Header />
-	    <h1>Profile: {user}</h1>
-	    <p>This is the user profile for a user named {user}.</p>
+	    <h1>Profile: {props.countStore.count}</h1>
+	    <p>This is the user profile for a user named {props.user}.</p>
 
-	    <div>Current time: {time}</div>
-	    <div>Profile route mounted {count} times.</div>
+	    <div>Current time:</div>
+	    <div>Profile route mounted times.</div>
 	    </div>
 	);
     }

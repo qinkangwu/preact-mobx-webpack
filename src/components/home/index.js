@@ -2,7 +2,7 @@ import { h } from 'preact';
 import style from './style.less';
 import Header from '../header';
 
-export default () => {
+export default (props) => {
     return (
 	<div class={style.home}>
         <Header />
