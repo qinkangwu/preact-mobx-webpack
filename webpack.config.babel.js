@@ -28,12 +28,6 @@ const copyFilePlugin = new CopyWebpackPlugin([{
 }, {
   from: './assets',
   to: './assets'
-},{
-  from : './tmap.html',
-  to : './'
-},{
-  from : './mapSrc',
-  to : './mapSrc'
 }]);
 
 const cleanPlugin = new CleanWebpackPlugin(['build'], {
