@@ -1,0 +1,21 @@
+{
+  "sourceMaps": false,
+  "compact": false,
+  "presets": [
+    [
+      "es2015",
+      "stage-0"
+    ]
+  ],
+  "plugins": [
+    [
+      "transform-exponentiation-operator" // _esMoudle
+    ],
+    [
+      "transform-react-jsx",
+      {
+        "pragma": "h"
+      }
+    ]
+  ]
+}
