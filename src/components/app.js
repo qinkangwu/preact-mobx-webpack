@@ -9,6 +9,9 @@ import Home from './home';
 const ProfileComponent = ()=> System.import('./profile');
 ProfileComponent.cname = 'profile';
 
+const AboutComponent = ()=> System.import('./about');
+AboutComponent.cname = 'about';
+
 const hashHistory = createHashHistory();
 const _loading = (hideLoading) => {
     const loadingDom = document.querySelector('.page_init_loading');
@@ -33,7 +36,8 @@ export default class App extends Component {
 	return (
 	    <Router history={hashHistory} onChange={this.handleRoute}>
             <Home default />
-            <AsyncRoute path="/profile" cname="profile" component={loadComponent(ProfileComponent)} loading={_loading} />            
+            <AsyncRoute path="/profile" cname="profile" component={loadComponent(ProfileComponent)} loading={_loading} />
+            <AsyncRoute path="/about" cname="about" component={loadComponent(AboutComponent)} loading={_loading} />
             </Router>
 	);
     }

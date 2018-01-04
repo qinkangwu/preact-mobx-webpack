@@ -5,7 +5,7 @@ import {observer,inject} from "mobx-preact";
 
 @inject('countStore')
 @observer
-export default class Profile extends Component {
+export default class About extends Component {
     constructor(props){
         super(props);
         this.state = {
@@ -20,13 +20,11 @@ export default class Profile extends Component {
     
     // Note: `user` comes from the URL, courtesy of our router
     render(props,state) {
+        console.log(props,state)
 	return (
 	    <div class={style.profile}>
             <Header />
 	    <h1>Profile: {props.countStore.count}</h1>
-	    <p onClick={props.countStore.increase}>This is the user profile for a user named {props.user}.</p>
-	    <div>Current time:</div>
-	    <div>Profile route mounted times.</div>
 	    </div>
 	);
     }
