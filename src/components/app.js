@@ -4,14 +4,21 @@ import {createHashHistory} from 'history';
 import AsyncRoute, { loadComponent } from '../lib/asyncRoute';
 
 
+<<<<<<< HEAD
 import Index from './index';
+=======
+import Home from './home';
+>>>>>>> aeb3f5254705ca70f70a837da013f1c75bd4c22e
 
 const ProfileComponent = ()=> System.import('./profile');
 ProfileComponent.cname = 'profile';
 
+<<<<<<< HEAD
 const HomeComponent = ()=> System.import('./index');
 HomeComponent.cname = 'index';
 
+=======
+>>>>>>> aeb3f5254705ca70f70a837da013f1c75bd4c22e
 const AboutComponent = ()=> System.import('./about');
 AboutComponent.cname = 'about';
 
@@ -38,11 +45,17 @@ export default class App extends Component {
     render() {
 	return (
 	    <Router history={hashHistory} onChange={this.handleRoute}>
+<<<<<<< HEAD
             
             <AsyncRoute path="/" cname="home" component={loadComponent(HomeComponent)} loading={_loading} />
             <AsyncRoute path="/profile" cname="profile" component={loadComponent(ProfileComponent)} loading={_loading} />
             <AsyncRoute path="/about" cname="about" component={loadComponent(AboutComponent)} loading={_loading} />
             <Index default />
+=======
+            <Home default />
+            <AsyncRoute path="/profile" cname="profile" component={loadComponent(ProfileComponent)} loading={_loading} />
+            <AsyncRoute path="/about" cname="about" component={loadComponent(AboutComponent)} loading={_loading} />
+>>>>>>> aeb3f5254705ca70f70a837da013f1c75bd4c22e
             </Router>
 	);
     }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* 公用的样式内容 */
 .fill() {
     position: absolute;
@@ -19,4 +20,23 @@
 
 .hidden {
     display: none !important;
+=======
+.fill() {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.scroll() {
+	overflow: auto;
+	overflow-scrolling: touch;
+
+	& > .inner {
+		position: relative;
+		transform: translateZ(0);
+		overflow: hidden;
+	}
+>>>>>>> aeb3f5254705ca70f70a837da013f1c75bd4c22e
 }
