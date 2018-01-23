@@ -17,19 +17,11 @@ class CountStore {
   }
 
   @action
-<<<<<<< HEAD
   increase (num) {
     if (this.increasing) {
       return;
     }
     this.count+=num;
-=======
-  increase () {
-    if (this.increasing) {
-      return;
-    }
-    this.count++;
->>>>>>> aeb3f5254705ca70f70a837da013f1c75bd4c22e
   }
 
   @action

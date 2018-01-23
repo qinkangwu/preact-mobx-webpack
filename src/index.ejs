@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-<<<<<<< HEAD
 
 <head>
   <% for (var chunk in htmlWebpackPlugin.files.css) { %>
@@ -91,57 +90,3 @@
 </body>
 
 </html>
-=======
-  <head>
-    <% for (var chunk in htmlWebpackPlugin.files.css) { %>
-      <link rel="preload" href="<%= htmlWebpackPlugin.files.css[chunk] %>"  as="style">
-    <% } %>
-    <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
-      <link rel="preload" href="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>" as="script">
-    <% } %>
-    <meta charset="utf-8">
-    <title>preact-boilerplate</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
-    <meta name="description" content="preact-boilerplate">
-    <meta name="msapplication-TileColor" content="#673ab8">
-    <meta name="msapplication-TileImage" content="./assets/icons/mstile-150x150.png">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="preact-boilerplate">
-    <meta name="application-name" content="preact-boilerplate">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="theme-color" content="#673ab8">
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="/assets/icons/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/assets/icons/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="./manifest.json">
-  </head>
-  <body>
-    <style>
-     html,
-     body {
-       padding: 0;
-       margin: 0;
-       overflow:hidden;
-       width:100%;
-       height:100%;
-     }
-
-     .page_init_loading {
-       width: 100%;
-       height: 100%;
-       z-index: 1000;
-       position: fixed;
-     }
-     .fadeOut>div {
-       opacity: 0;
-       transition: opacity .3s;
-       -webkit-transition: opacity .3s;
-     }
-    </style>
-    <div class="page_init_loading" ontouchmove="event.preventDefault()">
-      <div class="loadingGif"></div>
-    </div>
-  </body>
-</html>
->>>>>>> aeb3f5254705ca70f70a837da013f1c75bd4c22e
